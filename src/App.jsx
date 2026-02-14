@@ -378,38 +378,44 @@ function App() {
     }
   }
 
+ 
   return (
     <div className="app-container">
-      {showConfetti && <Confetti />}
-
       <h1>Voting DApp</h1>
 
-      <button onClick={connectWallet} disabled={loading}>
+      <button className="main-btn" onClick={connectWallet} disabled={loading}>
         {loading ? "Processing..." : "Connect Wallet"}
       </button>
 
-      <button onClick={register} disabled={!account || loading}>
+      <button className="main-btn" onClick={register} disabled={!account || loading}>
         Register
       </button>
 
       <h2>Candidates</h2>
-
-      {candidates.map((c, index) => (
-        <div key={index}>
-          <strong>{c.name}</strong>
-          <p>Votes: {c.votes}</p>
-          <button onClick={() => vote(index)}>Vote</button>
-        </div>
-      ))}
+      <div className="candidates-row">
+        {candidates.length === 0 ? (
+          <p>No candidates found.</p>
+        ) : (
+          candidates.map((c, index) => (
+            <div key={index} className="candidate-card">
+              <strong>{c.name}</strong>
+              <p>Votes: {c.votes.toString()}</p>
+              <button className="vote-btn" onClick={() => vote(index)} disabled={!account || loading}>
+                Vote
+              </button>
+            </div>
+          ))
+        )}
+      </div>
 
       {winner && (
-        <div>
-          Winner: {winner.name} — {winner.votes} votes
+        <div className="winner-card">
+          Winner: <strong>{winner.name}</strong> — {winner.votes.toString()} votes
         </div>
       )}
 
-      <p>{message}</p>
-      <p>Connected: {account}</p>
+      <p className="message">{message}</p>
+      <p>Connected Account: {account}</p>
     </div>
   );
 }
