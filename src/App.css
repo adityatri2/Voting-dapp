@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/3d-blockchain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #1f6feb;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.main-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 111, 235, 0.5);
+}
+.main-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(31, 111, 235, 0.5);
+}
+
+.candidates-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.candidate-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 140px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.candidate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(31, 111, 235, 0.5);
+}
+
+.vote-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  background: #238636;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.vote-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(35, 134, 54, 0.5);
+}
+.vote-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(35, 134, 54, 0.5);
+}
+
+.winner-card {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background: #30363d;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.message {
+  margin-top: 15px;
+  color: #8b949e;
+}
