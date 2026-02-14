@@ -1,6 +1,9 @@
 body {
   margin: 0;
-  background-color: #0f172a;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #0b1c2d;
   color: white;
-  font-family: system-ui, sans-serif;
 }
